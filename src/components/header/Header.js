@@ -1,10 +1,13 @@
 import { FaSyncAlt } from 'react-icons/fa'
 
-const Header = () => {
+const Header = ({getMoreCoins}) => {
   return (
     <header className="header">
       <h1 className='header-title'>CryptoBros</h1>
-      <FaSyncAlt />
+      <FaSyncAlt 
+        className='header-button'
+        onClick={getMoreCoins}
+      />
     </header>
   )
 }
