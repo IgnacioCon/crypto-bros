@@ -1,10 +1,16 @@
 
 
-const Search = () => {
+const Search = ({search, onSearch}) => {
   return (
     <div className="search">
       <h4>Search</h4>
-      <input className="search-input" type="text" placeholder="Bitcoin, BNB..."/>
+      <input
+        value={search}
+        onChange={(e) => onSearch(e.target.value)} 
+        className="search-input" 
+        type="text" 
+        placeholder="Bitcoin, BNB..."
+      />
     </div>
   )
 }
